@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="#1E88E5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></View>
+
+    <View
+        android:id="@+id/lightWave"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/ic_wave"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/welcome"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/welcome"
+        android:textSize="40sp"
+        app:layout_constraintTop_toBottomOf="@+id/lightWave" />
+
+    <Button
+        android:id="@+id/exploreButtonId"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:onClick="onclick_Option"
+        android:padding="10dp"
+        android:text="@string/discover"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome" />
+
+
+    <Button
+        android:id="@+id/aboutButtonId"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:onClick="onclick_Option"
+        android:padding="10dp"
+        android:text="@string/aboutme"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exploreButtonId" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/langugeConstraint"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/aboutButtonId">
+
+        <Button
+            android:id="@+id/turkishButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Türkçe"
+            app:layout_constraintEnd_toStartOf="@+id/englishButton"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/englishButton"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Englısh"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/turkishButton"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
